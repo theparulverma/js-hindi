@@ -35,3 +35,33 @@ const myFunction = function(){
 // null is a object type ,soo when asked what is the type of null is, it is object data type
 //undefined=>undefined
 //my function datatype=>function object ,kinda say sooo
+
+
+
+
+/***************memoryyyy*******/
+
+// stack memory => used in primitive data type
+//,Heap memory => non primitive
+
+// in stack we send a copy of the original data soo if there is a change in original value, toh orginial value mein koi change nhi hoga 
+//that's why myinsta mein value same hi rahegi and another mein dusri aayegi jo humne update ki hai
+// in stack or primitive memory orginial data doesnt change
+let myinsta = "elsa.2908"
+let another = myinsta
+another="sunshine";
+console.log(myinsta);
+console.log(another);
+
+let userOne={
+    email: "gbnmo@.com",
+    upi: 456789
+
+}
+let userTwo = userOne
+
+userTwo.email ="parul@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);//both have the same value as refernce is send soo there is a change in original value
+//both we have parul@gmail.com
