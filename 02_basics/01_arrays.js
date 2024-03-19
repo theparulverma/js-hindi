@@ -14,6 +14,22 @@ myArr.shift()//it delets the value which is shift at 1st position or delete 1st 
 //console.log(myArr.indexOf(3));//it gives the index value in arrray example 3 element is at index 3
 
 const newArr = myArr.join()
+//join operation had bind array also and its type is string
+console.log(myArr);//it will come in normal array format
+console.log(typeof newArr);//it will come in normal form.
 
+// slice, splice
+
+console.log("A",myArr);
+
+const myn1 = myArr.slice(1,3)//ismein 1 and 2 index vale elements include honge
+//3 include nhi honge.
+
+console.log(myn1);
+console.log("B",myArr);
+
+const myn2 = myArr.splice(1,3)// 1,2 and 3 elements teeno honge include 
+// and most imp asked in interviews that after using splice function 
+//jo hamara new array hai usmein se voh element nikal jayegii 1to 3 tak ki
 console.log(myArr);
-console.log(typeof newArr);
+console.log(myn2);
