@@ -58,3 +58,40 @@ console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 //it tells that tinderuser object does have this attribute or not!!?
+
+
+
+/*** de structure and json api in objects ***********/
+
+const course ={
+    coursename: "js in hindi",
+    price: "9999",
+    teacher: "parul"
+}
+
+console.log(course.teacher);//if  we want to access the teacher of course object soo we have to write in this way
+//but there is a second way too, after writing this we can access teacher any time without writing course.teacher
+const {teacher} = course // or can change the name of techer too like change into instructor
+const {teacher: instructor} = course
+console.log(instructor);
+console.log(teacher);
+
+
+// const navbar = ({company}) => {//de structuring happen in objects
+ //just for understanding   
+// }
+// navbar(company ="parul")
+
+//Api is example menu of resturant and the main working that do like we want samosa, we dont care about from where chef will bring aalo and pitti and all
+
+//how json se api call hoti hai.
+// { //just for refernce humne yeh dekha hai,it's not in this
+//     "name": "parul",
+//     "coursename": "js in hindi",
+//     "price": "free"
+// }
+[
+    {},
+    {},
+    {}
+]
