@@ -5,6 +5,7 @@ function sayName(){
     console.log("R");
     console.log("U");
     console.log("L");
+    console.log("streak");
 }
 //sayName()
  
