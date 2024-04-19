@@ -15,3 +15,8 @@ for (const key in myObject) {
     //console.log(myObject[key]);//for getting key values
     console.log(`${key} shortcut is for ${myObject[key]}`);
 }
+const programming = ["js","rb","py","java","cpp"]
+
+for(const key in programming){
+    console.log(`${key} value is for ${programming[key]}`);
+}
