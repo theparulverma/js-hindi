@@ -13,7 +13,7 @@ coding.forEach(function (val){
 //     console.log(item);
 // }
 
-// coding.forEach(printMe)
+// coding.forEach(printMe)//for each function mein direct koi function bhi put kar sakte hai
 
 coding.forEach( (item, index, arr)=> {
     console.log(item, index, arr);
