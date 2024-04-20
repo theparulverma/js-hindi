@@ -20,3 +20,11 @@ const programming = ["js","rb","py","java","cpp"]
 for(const key in programming){
     console.log(`${key} value is for ${programming[key]}`);
 }
+
+const map = new Map()
+map.set('IN',"India")
+map.set('USA',"Unites States of America")
+map.set('Fr',"France")
+// for(const key in map){//Maps cant be iterable soo it will not print naything
+//     console.log(key);
+// }
