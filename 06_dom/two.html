@@ -14,6 +14,30 @@
          </div>
 </body>
 <script>
-    document.querySelector()
-</script>
+    const parent = document.querySelector('.parent')
+    console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1].innerHTML);
+    // for(let i =0;i< parent.children.length;i++){
+    //     console.log(parent.children[i].innerHTML);
+    // }
+    parent.children[1].style.color ="orange"
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+     const dayOne = document.querySelector('.day') //it will select day monday
+    console.log(dayOne);
+    console.log(dayOne.parentElement);//it will give all the details of parent class 
+    console.log(dayOne.nextElementSibling);//monday sibling is tuesday
+    console.log("NODES: ",parent.childNodes);//nodes will be 9 NodeList(9) [text, div.day, text, div.day, text, div.day, text, div.day, text]
+// 0: text
+// 1: div.day
+// 2: text
+// 3: div.day
+// 4: text
+// 5: div.day
+// 6: text
+// 7: div.day
+// 8: textlength
+// : 9
+ </script>
 </html>
