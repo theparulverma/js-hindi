@@ -13,6 +13,7 @@
     
 </body>
 <script>
+    //first approach for adding new elements in the list 
      function addLanguage(langName){//itmeans jo humne class language banayi hai uske li mein ek aur li add karra rahe hai
         const li = document.createElement('li');
         li.innerHTML = `${langName}`
@@ -21,5 +22,27 @@
      }
      addLanguage("python")
      addLanguage('C++')
+     //this is optimized approach
+     function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+     }
+     addOptiLanguage('golang') 
+     //Edit
+     //first approach of replacing list value
+    const secondLang = document.querySelector("li:nth-child(2)")
+    secondLang.innerHTML="MOJO"
+    //second approach,more optimized approach
+    const newli = document.createElement('li')
+    newli.textContent = "React"
+    secondLang.replaceWith(newli);
+    //edit
+    //third approach using outerhtml
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML ='<li>Express</li>'
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove();
 </script>
 </html>
