@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parul aur Code | DOM</title>
+
+</head>
+<body style = "background-color: black; color:aliceblue">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    
+</body>
+<script>
+     function addLanguage(langName){//itmeans jo humne class language banayi hai uske li mein ek aur li add karra rahe hai
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').
+        appendChild(li)
+     }
+     addLanguage("python")
+     addLanguage('C++')
+</script>
+</html>
