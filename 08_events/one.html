@@ -27,27 +27,32 @@
     //target,toElement ,srcElement , currTarget
    // clientX,clientY,screenX,screenY->these are positions related
    //altKey, ctrlKey, shiftKey, keyCode
-    document.getElementById('owl').addEventListener('click',function(){
-        alert("owl clicked again")//event propogation, 2 types event bubbling,event capturing 
-    },false)//this false means event bubbling means small to bigger, bottom to up
-   // events we have to study -> type,timestamp,defaultPrevented
+    //document.getElementById('owl').addEventListener('click',function(){
+//         alert("owl clicked again")//event propogation, 2 types event bubbling,event capturing 
+//     },false)//this false means event bubbling means small to bigger, bottom to up
+//    // events we have to study -> type,timestamp,defaultPrevented
    
-   document.getElementById('images').addEventListener('click',function(e){
-    console.log("clicked inside the ul");
-   },false)
-   document.getElementById('owl').addEventListener('click',function(e){
-    console.log("owl clicked");//if we click on owl image ,first owl click will come then click inside the ul as it is event bubbling and li is inside ul, soo small to bigger and small is li element owl clicked then ul vali statement
-    //in case of event capturing when we will use both true ,event capturing top to bottom vice versa of bubbling
-    e.stopPropagation();//it will not do any propogation
-   },false)
-   document.getElementById('google').addEventListener('click',function(e){
-    e.preventDefault();
-    console.log("google clicked");
-    e.stopPropagation();
-   })
+//    document.getElementById('images').addEventListener('click',function(e){
+//     console.log("clicked inside the ul");
+//    },false)
+//    document.getElementById('owl').addEventListener('click',function(e){
+//     console.log("owl clicked");//if we click on owl image ,first owl click will come then click inside the ul as it is event bubbling and li is inside ul, soo small to bigger and small is li element owl clicked then ul vali statement
+//     //in case of event capturing when we will use both true ,event capturing top to bottom vice versa of bubbling
+//     e.stopPropagation();//it will not do any propogation
+//    },false)
+//    document.getElementById('google').addEventListener('click',function(e){
+//     e.preventDefault();
+//     console.log("google clicked");
+//     e.stopPropagation();
+//    })
    document.querySelector('#images').addEventListener('click',function(e){
-    console.log(e.target);
+    console.log(e.target.tagName);
+    if(e.target.tagName == 'IMG'){
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode
+    removeIt.remove()//for removing the images,when we will click on them
+    }
+    //removeIt.parentNode.removeChild(removeIt)// another approach for removing the images,by just clicking on it
    })
-
 </script>
 </html>
